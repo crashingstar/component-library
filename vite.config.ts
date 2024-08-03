@@ -14,9 +14,15 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src", "index.ts"),
+      entry: {
+        index: resolve(__dirname, "src", "index.ts"),
+        buttons: resolve(__dirname, "src/components/Button.tsx"),
+      },
       formats: ["es", "cjs"],
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format, entryName) =>
+        `components/${entryName}/${entryName}.${
+          format === "cjs" ? "cjs" : "es.js"
+        }`,
     },
     rollupOptions: {
       external: [

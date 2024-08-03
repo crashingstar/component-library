@@ -13,7 +13,7 @@
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     /* Bundler mode */
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
@@ -28,6 +28,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "./src"
+    "src"
   ]
 }
